@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
+    $languages = [
+        'languages'=> [
+            'Perl',
+            'PHP',
+            'Python'
+        ]
+    ];
+    \Log::debug($languages);
+//    dd($languages);
     return view('welcome');
 });
