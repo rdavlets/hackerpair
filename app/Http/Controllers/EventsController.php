@@ -8,12 +8,8 @@ class EventsController extends Controller
 {
     public function index()
     {
-        $events = [
-            'Laravel Hacking and Coffee',
-            'IoT with Raspberry Pi',
-            'Free Vue.js Lessons'
-        ];
-        return view('events.index')->with('events', $events);
+
+        return view('events.index');
     }
 
     public function show($id)

@@ -18,3 +18,7 @@ Route::get(
     'events/category/{category}/{subcategory}',
     'EventsController@category'
 );
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
