@@ -11,15 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    $languages = [
-        'languages'=> [
-            'Perl',
-            'PHP',
-            'Python'
-        ]
-    ];
-    \Log::debug($languages);
-//    dd($languages);
-    return view('welcome');
-});
+Route::get('/','WelcomeController@index');
+Route::get('events', 'EventsController@index');
+Route::get('events/{id}', 'EventsController@show')->name('events.show');
+Route::get(
+    'events/category/{category}/{subcategory}',
+    'EventsController@category'
+);
